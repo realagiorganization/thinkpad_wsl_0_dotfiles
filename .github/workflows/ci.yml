@@ -10,5 +10,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Install GUI test deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y remmina x11-apps xvfb scrot
       - name: Run checks
         run: scripts/ci/check.sh
+      - name: Capture GUI smoke screenshot
+        run: scripts/ci/smoke-gui.sh gui-smoke.png
+      - name: Upload GUI smoke screenshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: gui-smoke
+          path: gui-smoke.png

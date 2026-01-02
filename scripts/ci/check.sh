@@ -9,6 +9,7 @@ required_files=(
   "docs/windows-host.rdp"
   "scripts/wsl-x11.sh"
   "scripts/ci/smoke-wsl-x11.sh"
+  "scripts/ci/smoke-gui.sh"
   "scripts/diagnostics/update-advertising.sh"
   "scripts/rdp/create-remmina.sh"
   "docs/windows-host.remmina"
@@ -29,3 +30,4 @@ if ! rg -q '^full address:s:' docs/windows-host.rdp; then
 fi
 
 scripts/ci/smoke-wsl-x11.sh
+scripts/ci/smoke-gui.sh
