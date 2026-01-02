@@ -19,6 +19,7 @@ if [[ -z "${DISPLAY:-}" ]]; then
       export DISPLAY="${config_host}:0"
     else
       windows_ip=""
+      gateway_ip=""
       powershell_cmd=""
 
       if command -v powershell.exe >/dev/null 2>&1; then
@@ -37,9 +38,19 @@ if [[ -z "${DISPLAY:-}" ]]; then
       if [[ -n "${windows_ip}" ]]; then
         export DISPLAY="${windows_ip}:0"
       else
-        wsl_host_ip=$(awk '/nameserver/ { print $2; exit }' /etc/resolv.conf)
-        if [[ -n "${wsl_host_ip}" ]]; then
-          export DISPLAY="${wsl_host_ip}:0"
+        if command -v ip >/dev/null 2>&1; then
+          gateway_ip=$(ip route | awk '/default/ { print $3; exit }')
+        elif command -v route >/dev/null 2>&1; then
+          gateway_ip=$(route -n | awk '$1 == "0.0.0.0" { print $2; exit }')
+        fi
+
+        if [[ -n "${gateway_ip}" ]]; then
+          export DISPLAY="${gateway_ip}:0"
+        else
+          wsl_host_ip=$(awk '/nameserver/ { print $2; exit }' /etc/resolv.conf)
+          if [[ -n "${wsl_host_ip}" ]]; then
+            export DISPLAY="${wsl_host_ip}:0"
+          fi
         fi
       fi
     fi
