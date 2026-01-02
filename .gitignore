@@ -2,6 +2,10 @@
 !.gitignore
 !AGENTS.md
 !ADVERTISING.md
+!README.md
+.github/
+!.github/
+!.github/**
 !codex/
 !codex/**
 !docs/
