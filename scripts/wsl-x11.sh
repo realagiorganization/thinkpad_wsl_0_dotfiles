@@ -20,11 +20,6 @@ if [[ -z "${DISPLAY:-}" ]]; then
     else
       windows_ip=""
       powershell_cmd=""
-    if command -v powershell.exe >/dev/null 2>&1; then
-      powershell_cmd="powershell.exe"
-    elif [[ -x /mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe ]]; then
-      powershell_cmd="/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
-    fi
 
       if command -v powershell.exe >/dev/null 2>&1; then
         powershell_cmd="powershell.exe"
@@ -38,6 +33,7 @@ if [[ -z "${DISPLAY:-}" ]]; then
           windows_ip=$(${powershell_cmd} -NoProfile -Command "(Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.InterfaceAlias -notlike 'vEthernet (WSL)*' -and $_.IPAddress -notlike '169.254*' -and $_.IPAddress -notlike '127.*' } | Select-Object -First 1 -ExpandProperty IPAddress)" 2>/dev/null | tr -d '\r' || true)
         fi
       fi
+
       if [[ -n "${windows_ip}" ]]; then
         export DISPLAY="${windows_ip}:0"
       else
