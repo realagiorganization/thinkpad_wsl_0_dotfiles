@@ -1,8 +1,6 @@
 # thinkpad_wsl_0_dotfiles
 
-Replace `ORG_NAME` in the CI badge URL once the GitHub org is finalized.
-
-![CI](https://github.com/ORG_NAME/thinkpad_wsl_0_dotfiles/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/realagiorganization/thinkpad_wsl_0_dotfiles/actions/workflows/ci.yml/badge.svg)
 ![WSL X11 helper](https://img.shields.io/badge/feature-WSL%20X11%20helper-0a7f35)
 ![RDP access](https://img.shields.io/badge/feature-RDP%20access-1f6feb)
 ![Codex history](https://img.shields.io/badge/feature-Codex%20history%20snapshot-6f42c1)

@@ -15,3 +15,7 @@ This repository ships a helper script that sets `DISPLAY` for WSL and enables in
 ## Optional: auto-load for every shell
 Append this line to `~/.bashrc`:
 - `source /home/standard/scripts/wsl-x11.sh`
+
+## Testing override
+CI uses `WSL_X11_FORCE=1` to exercise the script outside WSL. Keep this override
+available for smoke tests.

@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if ! grep -qi microsoft /proc/version; then
-  exit 0
+if [[ "${WSL_X11_FORCE:-}" != "1" ]]; then
+  if ! grep -qi microsoft /proc/version; then
+    exit 0
+  fi
 fi
 
 if [[ -z "${DISPLAY:-}" ]]; then
