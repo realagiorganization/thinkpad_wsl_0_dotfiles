@@ -1,0 +1,9 @@
+*
+!.gitignore
+!AGENTS.md
+!codex/
+!codex/**
+!docs/
+!docs/**
+!scripts/
+!scripts/**
