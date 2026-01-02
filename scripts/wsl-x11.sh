@@ -8,9 +8,13 @@ if [[ "${WSL_X11_FORCE:-}" != "1" ]]; then
 fi
 
 if [[ -z "${DISPLAY:-}" ]]; then
-  wsl_host_ip=$(awk '/nameserver/ { print $2; exit }' /etc/resolv.conf)
-  if [[ -n "${wsl_host_ip}" ]]; then
-    export DISPLAY="${wsl_host_ip}:0"
+  if [[ -n "${WSL_X11_HOST:-}" ]]; then
+    export DISPLAY="${WSL_X11_HOST}:0"
+  else
+    wsl_host_ip=$(awk '/nameserver/ { print $2; exit }' /etc/resolv.conf)
+    if [[ -n "${wsl_host_ip}" ]]; then
+      export DISPLAY="${wsl_host_ip}:0"
+    fi
   fi
 fi
 

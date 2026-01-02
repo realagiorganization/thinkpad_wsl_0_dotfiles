@@ -12,6 +12,11 @@ This repository ships a helper script that sets `DISPLAY` for WSL and enables in
    - `source /home/standard/scripts/wsl-x11.sh`
 3. Launch an X11 app (example: `xclock`).
 
+## Host override
+If WSL DNS does not point at the Windows host, set the host IP directly:
+- `export WSL_X11_HOST=192.168.0.105`
+- `source /home/standard/scripts/wsl-x11.sh`
+
 ## Optional: auto-load for every shell
 Append this line to `~/.bashrc`:
 - `source /home/standard/scripts/wsl-x11.sh`
