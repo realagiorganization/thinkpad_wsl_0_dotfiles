@@ -1,0 +1,14 @@
+[remmina]
+name=Windows Host
+protocol=RDP
+server=localhost
+username=
+password=
+domain=
+resolution_mode=2
+scale=1
+color_depth=32
+sound=local
+security=
+authentication=
+ignore-tls-errors=1

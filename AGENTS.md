@@ -10,6 +10,7 @@ Maintain a minimal WSL-focused repo that tracks Codex history, Codex skills, and
 - Keep `scripts/wsl-x11.sh` and `docs/wsl-x11.md` in sync when changing X11 behavior.
 - Update `README.md` badges when adding or removing features.
 - Refresh `ADVERTISING.md` by running `scripts/diagnostics/update-advertising.sh` when diagnostics change.
+- Regenerate `docs/windows-host.remmina` after editing `docs/windows-host.rdp` by running `scripts/rdp/create-remmina.sh`.
 - Keep `.github/workflows/ci.yml` and `scripts/ci/check.sh` aligned with required files.
 - Make a detailed commit for each significant step (new assets, config changes, or documentation updates).
 

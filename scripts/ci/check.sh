@@ -10,6 +10,8 @@ required_files=(
   "scripts/wsl-x11.sh"
   "scripts/ci/smoke-wsl-x11.sh"
   "scripts/diagnostics/update-advertising.sh"
+  "scripts/rdp/create-remmina.sh"
+  "docs/windows-host.remmina"
 )
 
 for file in "${required_files[@]}"; do

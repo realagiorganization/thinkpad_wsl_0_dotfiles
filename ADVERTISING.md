@@ -3,6 +3,7 @@
 Use the RDP file below to connect to the Windows host from a compatible client.
 
 - Windows Host RDP: [docs/windows-host.rdp](docs/windows-host.rdp)
+- Remmina profile: [docs/windows-host.remmina](docs/windows-host.remmina)
 
 # System Advertising
 
