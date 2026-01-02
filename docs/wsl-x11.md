@@ -17,6 +17,16 @@ If WSL DNS does not point at the Windows host, set the host IP directly:
 - `export WSL_X11_HOST=192.168.0.105`
 - `source /home/standard/scripts/wsl-x11.sh`
 
+## Host detection
+By default, the script attempts to read the Windows IPv4 address via Windows PowerShell
+(`powershell.exe` or `/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe`)
+and falls back to `/etc/resolv.conf` if PowerShell is unavailable.
+
+## Persistent host config
+You can also store the Windows host IP in `~/.config/wsl-x11-host`:
+- `echo 192.168.0.105 > ~/.config/wsl-x11-host`
+- `source /home/standard/scripts/wsl-x11.sh`
+
 ## Optional: auto-load for every shell
 Append this line to `~/.bashrc`:
 - `source /home/standard/scripts/wsl-x11.sh`
