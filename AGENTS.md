@@ -9,6 +9,7 @@ Maintain a minimal WSL-focused repo that tracks Codex history, Codex skills, and
 - Update `codex/skills/` by copying from `/home/standard/.codex/skills/`.
 - Keep `scripts/wsl-x11.sh` and `docs/wsl-x11.md` in sync when changing X11 behavior.
 - Update `README.md` badges when adding or removing features.
+- Refresh `ADVERTISING.md` by running `scripts/diagnostics/update-advertising.sh` when diagnostics change.
 - Keep `.github/workflows/ci.yml` and `scripts/ci/check.sh` aligned with required files.
 - Make a detailed commit for each significant step (new assets, config changes, or documentation updates).
 

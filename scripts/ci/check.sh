@@ -9,6 +9,7 @@ required_files=(
   "docs/windows-host.rdp"
   "scripts/wsl-x11.sh"
   "scripts/ci/smoke-wsl-x11.sh"
+  "scripts/diagnostics/update-advertising.sh"
 )
 
 for file in "${required_files[@]}"; do
