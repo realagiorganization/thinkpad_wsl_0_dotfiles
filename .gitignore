@@ -12,3 +12,5 @@
 !docs/**
 !scripts/
 !scripts/**
+!prompt_artifacts/
+!prompt_artifacts/**

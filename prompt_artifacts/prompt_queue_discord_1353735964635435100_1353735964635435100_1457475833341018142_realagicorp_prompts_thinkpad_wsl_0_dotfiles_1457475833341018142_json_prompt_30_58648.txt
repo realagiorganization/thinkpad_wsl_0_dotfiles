@@ -1,0 +1,19 @@
+Prompt ID: prompt_queue_discord_1353735964635435100_1353735964635435100_1457475833341018142_realagicorp_prompts_thinkpad_wsl_0_dotfiles_1457475833341018142_json_prompt_30_58648
+Timestamp: 2026-01-05T18:37:31.311006Z
+Source: discord
+Queue: prompt_queue::discord_1353735964635435100_1353735964635435100_1457475833341018142_realagicorp_prompts_thinkpad_wsl_0_dotfiles_1457475833341018142_json
+Run: 1/1
+Content:
+Discord channel: prompts_thinkpad_wsl_0_dotfiles
+Channel ID: 1457475833341018142
+Messages aggregated: 1
+Attachments saved for execution (2): attachments/image-26222.png, attachments/image-6b1a2.png | mounted at .prompt_attachments/prompt_queue_discord_1353735964635435100_1353735964635435100_1457475833341018142_realagicorp_prompts_thinkpad_wsl_0_dotfiles_1457475833341018142_json_prompt_30_58648
+Attachment locations:
+- image-26222.png (146095 bytes) -> .prompt_attachments/prompt_queue_discord_1353735964635435100_1353735964635435100_1457475833341018142_realagicorp_prompts_thinkpad_wsl_0_dotfiles_1457475833341018142_json_prompt_30_58648/image-26222.png
+- image-6b1a2.png (93673 bytes) -> .prompt_attachments/prompt_queue_discord_1353735964635435100_1353735964635435100_1457475833341018142_realagicorp_prompts_thinkpad_wsl_0_dotfiles_1457475833341018142_json_prompt_30_58648/image-6b1a2.png
+
+Discord channel: prompts_thinkpad_wsl_0_dotfiles | ID: 1457475833341018142 | Reaction filter: :white_check_mark:
+
+Messages with required reaction:
+[1] (2026-01-04T20:49:42.192+00:00 | realagiadmin_29264 | id=1457476105685565658) test/screenshot github pabes website in https://github.com/realagiorganization/thinkpad_wsl_0_dotfiles in the usual separate pipeline branch
+Attachments: image.png: /out/1353735964635435100/_media/image-26222.png ; image.png: /out/1353735964635435100/_media/image-6b1a2.png
